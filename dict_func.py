@@ -1,8 +1,8 @@
 # Write your code here!
 def employee_print(employee_info):
-    name = None
-    salary = None
-    role = None 
+    name = "N/A"
+    salary = "N/A"
+    role = "N/A"
     if "Name" in employee_info:
         name = employee_info["Name"]
     if "Salary" in employee_info:
