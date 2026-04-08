@@ -1,6 +1,9 @@
 # Write your code here!
 def temp_and_color(data):
-    temp = data["temp"]
-    color = data["color"]
+    temp = None
+    color = None 
+    if "temp" in data:
+        temp = data["temp"]      
+    if "color" in data:
+        color = data["color"]
     return (temp, color)
-
