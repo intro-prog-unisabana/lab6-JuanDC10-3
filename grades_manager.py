@@ -24,3 +24,25 @@ def get_students(student_grades, keys):
         if not found:
             print(key.title(), "not found!") 
     return result
+def calculate_averages(student_grades):
+    result = {}
+    for student, grades in student_grades.items():
+        total = 0
+        count = 0
+        for score in grades.values():
+            total += score
+            count += 1
+        if count == 0:
+            result[student] = 0
+        else:
+            result[student] = round(total / count)
+    return result
+def print_students(student_grades):
+    for student, grades in student_grades.items():
+        print(student + ":")
+        
+        if len(grades) == 0:
+            print("  No subjects")
+        else:
+            for subject, score in grades.items():
+                print(" ", subject + ":", score)
