@@ -1,5 +1,8 @@
 def student_averages(students):
-    total = 0
-    for student in students: 
-        total += students[student]
-    return total
+    result = {}
+    for student, grades in students:
+        total = 0
+        for score in grades:
+            total += score
+        result[student] = total / len(grades)
+    return result
