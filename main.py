@@ -25,7 +25,7 @@ while True:
         if sub_option == "a":
             avg = calculate_averages(my_grades)
             for student, value in avg.items():
-                print(student + ":", value)
+                print(student + ":", round(value, 1))
         
         elif sub_option == "b":
             names = input("Enter student names (comma-separated):\n")
@@ -35,7 +35,7 @@ while True:
             avg = calculate_averages(selected)
             
             for student, value in avg.items():
-                print(student + ":", value)
+                print(student + ":", round(value, 1))
         
         else:
             print("Invalid option selected!")
