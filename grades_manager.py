@@ -39,7 +39,7 @@ def calculate_averages(student_grades):
         if count == 0:
             result[student] = 0.0
         else:
-            result[student] = float(round(total / count))
+            result[student] = total / count
     return result
 
 def avg_by_student(student_grades, keys=None):
